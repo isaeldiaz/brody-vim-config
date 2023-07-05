@@ -81,3 +81,4 @@ map <F3> :NERDTreeFind %<CR>
 map <Leader>n :NERDTreeFocus<CR>
 let NERDTreeShowLineNumbers=1
 
+nnoremap <F1> :h brody-vim-config<CR>

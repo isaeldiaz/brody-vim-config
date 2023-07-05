@@ -2,6 +2,8 @@
 
 This is a help file for my custom key bindings. It explains what each binding does and how to use it.
 
+<F1>      Opens this help window
+
 ==============================================================================
 1. Plug 'easymotion/vim-easymotion'                      *brody-vim-config-easymotion*
 
