@@ -1,0 +1,78 @@
+*brody-vim-config.txt*  My custom key bindings
+
+This is a help file for my custom key bindings. It explains what each binding does and how to use it.
+
+==============================================================================
+1. Plug 'easymotion/vim-easymotion'                      *brody-vim-config-easymotion*
+
+These are the bindings for the easymotion plugin, which provides fast
+motion within a line or across the screen.
+
+<Leader>w             Move to word
+<Leader>f{char}       Move to {char}
+<Leader>/{char}       Search {char}
+<Leader>s{char}{char} Move to {char}{char}
+
+See |easymotion.txt| for more details.
+
+==============================================================================
+2. Plug 'scrooloose/nerdtree'                              *brody-vim-config-nerdtree*
+
+These are the bindings for the nerdtree plugin, which provides a tree
+explorer for the filesystem.
+
+<F2>      Toggle On/Off
+<F3>      Open in current file
+<Leader>n Move Cursor to NERDTree
+
+See |nerdtree.txt| for more details.
+
+==============================================================================
+3. Plug 'christoomey/vim-tmux-navigator'              *brody-vim-config-tmux-navigator*
+
+These are the bindings for the tmux-navigator plugin, which allows seamless
+navigation between vim and tmux splits using a consistent set of hotkeys.
+
+<ctrl-h> => Left
+<ctrl-j> => Down
+<ctrl-k> => Up
+<ctrl-l> => Right
+<ctrl-\> => Previous split
+
+See |tmux-navigator.txt| for more details.
+
+==============================================================================
+4. Plug 'jlanzarotta/bufexplorer'                        *brody-vim-config-bufexplorer*
+
+These are the bindings for the bufexplorer plugin, which provides an easy
+and convenient way to list and switch between buffers.
+
+<Leader>be :normal open
+<Leader>bt :toggle open / close
+<Leader>bs :force horizontal split open
+<Leader>bv :force vertical split open
+
+See |bufexplorer.txt| for more details.
+
+==============================================================================
+5. Plug 'tpope/vim-surround'                                *brody-vim-config-surround*
+
+These are the bindings for the surround plugin, which provides mappings to
+easily delete, change and add surroundings in pairs.
+
+ delimiter can be     : ' " <tag delimiter> { [
+ cs{sr1}{sr2}         : Change sorround delimiter1 to delimiter2
+ cst{sr2}             : Change sorround tag to delimiter2
+ ds{sr}               : Delete delimiter
+ dst                  : Delete sorround tag
+ Text object can be   : a-word (aw), inner-word (iw), etc
+ ys{text-object}{sr1} : Yank surround delimiter in text-object tp sr1
+ yss{sr1}             : Yanks sorround into the entire line
+ S{sr1}               : In VISUAL Mode it will insert delimiters before and
+                        after the given lines Very useful for XML and HTML
+
+ See |surround.txt| for more details.
+
+ ==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
+
