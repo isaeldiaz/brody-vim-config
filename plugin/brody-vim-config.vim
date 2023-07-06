@@ -1,32 +1,15 @@
-set nocompatible              " be iMproved, required
-set expandtab                 " To make tabs into spaces
+nnoremap <F1> :h brody-vim-config<CR>
 
+set expandtab                 " To make tabs into spaces
 set tabstop=2
 set shiftwidth=2
-filetype indent on
 set hlsearch
 set number
 set nomousehide
-
-set number relativenumber
-"
-" Map the leader key to SPACE
-let mapleader="\<SPACE>"
+filetype indent on
 
 set guioptions-=T  "remove toolbar
 
-
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
 
 " Associate r files to XML syntax
  au BufNewFile,BufRead *.r setlocal ft=xml
@@ -51,13 +34,22 @@ noremap <C-ScrollWheelUp> :call AdjustFontSize(1)<CR>
 noremap <C-ScrollWheelDown> :call AdjustFontSize(-1)<CR>
 inoremap <C-ScrollWheelUp> <Esc>:call AdjustFontSize(1)<CR>a
 inoremap <C-ScrollWheelDown> <Esc>:call AdjustFontSize(-1)<CR>a
-" ----------------------------------
 
 
-if has('nvim')
-  " Esc to leave terminal mode
-  tnoremap <Esc> <C-\><C-n>
+if has('win32') || has ('win64')
+  "To use powershell (on Windows): >
+  set shell=powershell.exe
+  set shellxquote=
+  let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command '
+  let &shellquote   = ''
+  let &shellpipe    = '| Out-File -Encoding UTF8 %s'
+  let &shellredir   = '| Out-File -Encoding UTF8 %s'
+
+  " Copy automatically to clipboard
+  set clipboard+=unnamedplus
 endif
+
+" ----------------------------------
 
 " ===========  Plug 'flazz/vim-colorschemes'
 colorscheme wombat
@@ -81,4 +73,8 @@ map <F3> :NERDTreeFind %<CR>
 map <Leader>n :NERDTreeFocus<CR>
 let NERDTreeShowLineNumbers=1
 
-nnoremap <F1> :h brody-vim-config<CR>
+"==========     Plug 'nvim-telescope/telescope.nvim'
+nnoremap <leader>tf <cmd>Telescope find_files<cr>
+nnoremap <leader>tg <cmd>Telescope live_grep<cr>
+nnoremap <leader>tb <cmd>Telescope buffers<cr>
+nnoremap <leader>th <cmd>Telescope help_tags<cr>

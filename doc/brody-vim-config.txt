@@ -75,6 +75,19 @@ easily delete, change and add surroundings in pairs.
 
  See |surround.txt| for more details.
 
+==============================================================================
+6. Plug 'nvim-telescope/telescope.nvim'                      *brody-vim-config-telescope*
+
+These are the bindings for the telescope plugin, which provides mappings to
+ fuzzy finder
+
+<leader>tf : Telescope find_files
+<leader>tg : Telescope live_grep
+<leader>tb : Telescope buffers
+<leader>th : Telescope help_tags
+
+ See |telescope.txt| for more details.
+
  ==============================================================================
  vim:tw=78:ts=8:ft=help:norl:
 
