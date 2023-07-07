@@ -5,7 +5,7 @@ This is a help file for my custom key bindings. It explains what each binding do
 <F1>      Opens this help window
 
 ==============================================================================
-1. Plug 'easymotion/vim-easymotion'                      *brody-vim-config-easymotion*
+Plug 'easymotion/vim-easymotion'
 
 These are the bindings for the easymotion plugin, which provides fast
 motion within a line or across the screen.
@@ -18,7 +18,7 @@ motion within a line or across the screen.
 See |easymotion.txt| for more details.
 
 ==============================================================================
-2. Plug 'scrooloose/nerdtree'                              *brody-vim-config-nerdtree*
+Plug 'scrooloose/nerdtree'
 
 These are the bindings for the nerdtree plugin, which provides a tree
 explorer for the filesystem.
@@ -30,7 +30,7 @@ explorer for the filesystem.
 See |nerdtree.txt| for more details.
 
 ==============================================================================
-3. Plug 'christoomey/vim-tmux-navigator'              *brody-vim-config-tmux-navigator*
+Plug 'christoomey/vim-tmux-navigator'
 
 These are the bindings for the tmux-navigator plugin, which allows seamless
 navigation between vim and tmux splits using a consistent set of hotkeys.
@@ -44,7 +44,7 @@ navigation between vim and tmux splits using a consistent set of hotkeys.
 See |tmux-navigator.txt| for more details.
 
 ==============================================================================
-4. Plug 'jlanzarotta/bufexplorer'                        *brody-vim-config-bufexplorer*
+Plug 'jlanzarotta/bufexplorer'
 
 These are the bindings for the bufexplorer plugin, which provides an easy
 and convenient way to list and switch between buffers.
@@ -57,7 +57,7 @@ and convenient way to list and switch between buffers.
 See |bufexplorer.txt| for more details.
 
 ==============================================================================
-5. Plug 'tpope/vim-surround'                                *brody-vim-config-surround*
+Plug 'tpope/vim-surround'
 
 These are the bindings for the surround plugin, which provides mappings to
 easily delete, change and add surroundings in pairs.
@@ -76,7 +76,7 @@ easily delete, change and add surroundings in pairs.
  See |surround.txt| for more details.
 
 ==============================================================================
-6. Plug 'nvim-telescope/telescope.nvim'                      *brody-vim-config-telescope*
+Plug 'nvim-telescope/telescope.nvim'
 
 These are the bindings for the telescope plugin, which provides mappings to
  fuzzy finder
@@ -88,6 +88,47 @@ These are the bindings for the telescope plugin, which provides mappings to
 
  See |telescope.txt| for more details.
 
- ==============================================================================
+==============================================================================
+Plug 'scrooloose/nerdcommenter'
+
+[count]<leader>cc       : Comment out the current line or text selected in visual mode.
+[count]<leader>c<space> : Toggles the comment state of the selected line(s).
+                          If the topmost selected line is commented, all selected lines
+                          are uncommented and vice versa.
+[count]<leader>cu       : Uncomments the selected line(s).
+
+See |nerdcommenter.txt| for more details.
+
+==============================================================================
+Plug 'junegunn/vim-easy-align'
+
+In normal mode:
+ ga  : Enter Easy align interactive, e.g. ga[ip][=] will align paragragh to
+       '=' delimiter.
+
+In Visual mode:
+ [text-object]ga [align-delimiter] : Will allign the text object at the given
+                                     delimiter, e.g. [ip]ga[=] -> Align inner 
+                                     paragraph to '=' delimiter.
+
+In EasyAlign interactive mode 
+<c-x>      -> to enter regex expression
+<space>    ->	around 1st whitespaces
+2<space>   ->	around 2nd whitespaces
+-<space>   ->	around the last whitespaces
+-2<space>  ->	around the 2nd to last whitespaces
+: ->	around 1st colon (key:  value)
+<right>: ->	around 1st colon (key : value)
+= ->	around 1st operators with =
+3= ->	around 3rd operators with =
+*= ->	around all operators with =
+**= ->	left-right alternating around =
+<enter>= ->	right alignment around 1st =
+<enter>**= ->	right-left alternating around =
+
+
+See |*easy-align.txt|* for more details.
+
+==============================================================================
  vim:tw=78:ts=8:ft=help:norl:
 
