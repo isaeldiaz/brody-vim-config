@@ -156,5 +156,18 @@ set nu!  : to toggle off display of line numbers
 See |numbertoggle.txt| for more details
 
 ==============================================================================
- vim:tw=78:ts=8:ft=help:norl:
+Plug 'andymass/vim-matchup'
 
+{count}%  : If {count} is less than 7, go forwards {count} times.
+{count}[% : go to [count]th previous outer open word. Allows navigation to the 
+            start of blocks surrounding the cursor.
+{count}]% : go to [count]th next surrounding close word.
+
+Adds motions g%, [%, ]%, and z%. Combines these motions into convenient text 
+objects i% and a%.
+
+
+See |matchup.txt| for more details
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:

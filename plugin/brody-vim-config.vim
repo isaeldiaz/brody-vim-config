@@ -4,7 +4,6 @@ set expandtab                 " To make tabs into spaces
 set tabstop=2
 set shiftwidth=2
 set hlsearch
-set number
 set nomousehide
 set diffopt+=algorithm:patience
 set guioptions-=T  "remove toolbar
