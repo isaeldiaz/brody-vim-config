@@ -6,9 +6,9 @@ set shiftwidth=2
 set hlsearch
 set number
 set nomousehide
-filetype indent on
-
+set diffopt+=algorithm:patience
 set guioptions-=T  "remove toolbar
+filetype indent on
 
 
 " Associate r files to XML syntax
@@ -82,4 +82,19 @@ nnoremap <leader>th <cmd>Telescope help_tags<cr>
 "==========     Plug 'junegunn/vim-easy-align'
 vmap <Enter> <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+
+
+"==========     Plug 'jeffkreeftmeijer/vim-numbertoggle'
+function! ToggleNumbers()
+    if &number
+        set nonumber
+        set norelativenumber
+    else
+        set number
+        set relativenumber
+    endif
+endfunction
+
+nnoremap <C-n> :call ToggleNumbers()<CR>
 

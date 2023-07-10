@@ -113,21 +113,47 @@ In Visual mode:
 
 In EasyAlign interactive mode 
 <c-x>      -> to enter regex expression
-<space>    ->	around 1st whitespaces
-2<space>   ->	around 2nd whitespaces
--<space>   ->	around the last whitespaces
--2<space>  ->	around the 2nd to last whitespaces
-: ->	around 1st colon (key:  value)
-<right>: ->	around 1st colon (key : value)
-= ->	around 1st operators with =
-3= ->	around 3rd operators with =
-*= ->	around all operators with =
-**= ->	left-right alternating around =
-<enter>= ->	right alignment around 1st =
-<enter>**= ->	right-left alternating around =
+<space>    -> around 1st whitespaces
+2<space>   -> around 2nd whitespaces
+-<space>   -> around the last whitespaces
+-2<space>  -> around the 2nd to last whitespaces
+:          -> around 1st colon (key:  value)
+<right>:   -> around 1st colon (key : value)
+=          -> around 1st operators with =
+3=         -> around 3rd operators with =
+*=         -> around all operators with =
+**=        -> left-right alternating around =
+<enter>=   -> right alignment around 1st =
+<enter>**= -> right-left alternating around =
 
 
 See |*easy-align.txt|* for more details.
+
+==============================================================================
+Plug 'triglav/vim-visual-increment'
+Create increasing sequence of numbers via visual mode
+
+In Visual mode
+[number]<C-a> : Increment all the indexes from the first one selected by
+                number, default is number=1
+
+set nrformats=[format]  : The format can be bin, alpha, octal, hex, hex 
+                          must start with 0x and octal with 0. More than one
+                          format can be set as a comma separated values e.g.
+                          set nrformat=bin,alpha,hex
+
+See |visual-increment.txt| for more details
+
+==============================================================================
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
+set rnu! : to remove relative numbers
+set nu   : in commandline mode to turn on and
+set nonu : will turn off the line number display or
+set nu!  : to toggle off display of line numbers
+<C-n>    : Toggle numbers or not number
+
+See |numbertoggle.txt| for more details
 
 ==============================================================================
  vim:tw=78:ts=8:ft=help:norl:
