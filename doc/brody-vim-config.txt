@@ -5,6 +5,18 @@ This is a help file for my custom key bindings. It explains what each binding do
 <F1>      Opens this help window
 
 ==============================================================================
+*Quickfix*
+
+:copen " Open the quickfix window
+:ccl   " Close it
+:cw    " Open it if there are "errors", close it otherwise (some people prefer this)
+:cn    " Go to the next error in the window
+:cp    " Go to the previous error in the window
+:cnf   " Go to the first error in the next file
+:.cc   " Go to error under cursor (if cursor is in quickfix window)
+
+See |quickfix.txt| for more details
+==============================================================================
 Plug 'easymotion/vim-easymotion'
 
 These are the bindings for the easymotion plugin, which provides fast

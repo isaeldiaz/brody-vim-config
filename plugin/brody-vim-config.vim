@@ -44,9 +44,10 @@ if has('win32') || has ('win64')
   let &shellpipe    = '| Out-File -Encoding UTF8 %s'
   let &shellredir   = '| Out-File -Encoding UTF8 %s'
 
-  " Copy automatically to clipboard
-  set clipboard+=unnamedplus
 endif
+
+" Copy automatically to clipboard
+set clipboard+=unnamedplus
 
 " ----------------------------------
 
@@ -87,8 +88,12 @@ nmap ga <Plug>(EasyAlign)
 "==========     Plug 'jeffkreeftmeijer/vim-numbertoggle'
 function! ToggleNumbers()
     if &number
-        set nonumber
-        set norelativenumber
+        if &relativenumber
+          set norelativenumber
+        else
+          set nonumber
+          set norelativenumber
+        endif
     else
         set number
         set relativenumber
