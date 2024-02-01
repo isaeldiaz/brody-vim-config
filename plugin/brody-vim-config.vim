@@ -1,4 +1,4 @@
-nnoremap <F1> :h brody-vim-config<CR>
+nnoremap <F10> :h brody-vim-config<CR>
 
 set expandtab                 " To make tabs into spaces
 set tabstop=2
@@ -50,6 +50,19 @@ endif
 set clipboard+=unnamedplus
 
 " ----------------------------------
+"  Mouse support toggling
+function! ToggleMouseSupport()
+  if &mouse == 'a'
+    set mouse=
+    echo "Mouse support OFF"
+  else
+    set mouse=a
+    echo "Mouse support ON"
+  endif
+endfunction
+
+nnoremap <C-l> :call ToggleMouseSupport()<CR>
+    
 
 " ===========  Plug 'flazz/vim-colorschemes'
 colorscheme wombat

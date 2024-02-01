@@ -2,8 +2,11 @@
 
 This is a help file for my custom key bindings. It explains what each binding does and how to use it.
 
-<F1>      Opens this help window
+<F10>      Opens this help window
 
+==============================================================================
+Mouse support
+<C-l>    Toggle mouse support
 ==============================================================================
 *Quickfix*
 
