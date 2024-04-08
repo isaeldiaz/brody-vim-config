@@ -5,6 +5,36 @@ This is a help file for my custom key bindings. It explains what each binding do
 <F10>      Opens this help window
 
 ==============================================================================
+Plug 'statox/vim-compare-lines'
+
+Quickly compare two lines in a vim buffer.
+
+:CL                     Compare current line with the following one
+:CL {line-number}       Compare current line with the one specified
+:CL {line1} {line2}     Compare line1 and line2
+
+See compare-lines.txt for more info and details
+==============================================================================
+Plug 'AndrewRadev/linediff.vim'
+
+Diff sections from same file or different files
+
+:[range]Linediff        Main plugin command, If executed
+                        first time - Adds selected text to the comparison buf
+                        second time - Compares selected text with the first
+                        third time - a new diff-ine is initiated
+
+:LinediffReset[!]       Resets the diff process
+
+For more than two sections to be diff look the following example:
+Example:
+    :1,2Linediff
+    :3,4LinediffAdd
+    :5,6LinediffAdd
+    :LinediffShow
+
+See linediff.txt for more details
+==============================================================================
 Mouse support
 <C-l>    Toggle mouse support
 ==============================================================================
