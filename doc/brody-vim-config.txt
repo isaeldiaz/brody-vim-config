@@ -5,6 +5,17 @@ This is a help file for my custom key bindings. It explains what each binding do
 <F10>      Opens this help window
 
 ==============================================================================
+Rigrep
+
+:grep -w foo (equivalent to :grep '\bfoo\b')    Search for the exact word foo (not foobar)
+:grep foo -t j                                  Search for foo in JavaScript files
+:grep foo -g '*.js                              Search for foo in files matching a glob
+
+Works with any terminal command:
+:grep foo ``git diff --name-only master``        Search in files modified between git revisions
+:grep foo ``git ls-files --modified``          Search in files modified
+
+==============================================================================
 Plug 'statox/vim-compare-lines'
 
 Quickly compare two lines in a vim buffer.
@@ -13,7 +24,7 @@ Quickly compare two lines in a vim buffer.
 :CL {line-number}       Compare current line with the one specified
 :CL {line1} {line2}     Compare line1 and line2
 
-See compare-lines.txt for more info and details
+See |compare-lines.txt| for more info and details
 ==============================================================================
 Plug 'AndrewRadev/linediff.vim'
 
@@ -33,7 +44,7 @@ Example:
     :5,6LinediffAdd
     :LinediffShow
 
-See linediff.txt for more details
+See |linediff.txt| for more details
 ==============================================================================
 Mouse support
 <C-l>    Toggle mouse support
